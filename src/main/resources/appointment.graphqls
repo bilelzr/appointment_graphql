@@ -1,0 +1,26 @@
+
+type Appointment {
+  id: ID!
+  clientId: ID!
+  agentId: ID
+  propertyId: ID!
+  dateTime: String!
+  description: String
+  status: String
+}
+
+input UpdateAppointmentInput {
+  id: ID!
+  description: String
+  status: String
+}
+
+extend type Query {
+  findAllAppointments: [Appointment]!
+}
+
+extend type Mutation {
+  createAppointment(clientId: ID!, agentId: ID, propertyId: ID!, dateTime: String!, description: String): Appointment!
+  updateAppointment(input: UpdateAppointmentInput!): Appointment!
+  deleteAppointment(id: ID!): Boolean
+}
