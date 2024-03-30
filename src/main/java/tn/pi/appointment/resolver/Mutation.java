@@ -4,6 +4,7 @@ import graphql.kickstart.tools.GraphQLMutationResolver;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import tn.pi.appointment.entities.Appointment;
 import tn.pi.appointment.entities.Author;
 import tn.pi.appointment.entities.Tutorial;
